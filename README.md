@@ -5,6 +5,12 @@ El sistema busca optimizar la administración de citas, documentos médicos, aud
 
 ---
 
+## 🚀 Enlace al Código Fuente
+Puedes encontrar el repositorio oficial aquí:
+https://github.com/isabellacruzq-lgtm/Gestion-Hospitalaria
+
+---
+
 ## 📌 Objetivos del Proyecto
 - Centralizar la gestión de usuarios, citas y documentos médicos.
 - Facilitar la comunicación entre administradores, médicos, enfermeras y pacientes.
