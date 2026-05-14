@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MED-CONTROL LOGIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="login-screen.component.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <!-- HEADER -->
+    <div class="login-header">
+
+        <div class="logo-wrapper">
+
+            <svg width="65" height="65" viewBox="0 0 200 200" fill="none">
+                <path d="M70 30H130V70H170V130H130V170H70V130H30V70H70V30Z"
+                      stroke="#4F46E5"
+                      stroke-width="12"
+                      stroke-linejoin="round"/>
+                <path d="M60 100L90 130L175 45"
+                      stroke="#4F46E5"
+                      stroke-width="18"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </div>
+
+        <div class="header-text">
+            <h1>PORTAL MED-CONTROL</h1>
+
+            <div class="header-subtitle">
+                <span class="line"></span>
+
+                <p>MÓDULO DE AUTENTICACIÓN DE SEGURIDAD</p>
+
+                <span class="line"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="login-card">
+
+        <!-- WATERMARK -->
+        <div class="watermark">
+
+            <svg width="160" height="160" viewBox="0 0 200 200" fill="none">
+                <path d="M70 30H130V70H170V130H130V170H70V130H30V70H70V30Z"
+                      stroke="#4F46E5"
+                      stroke-width="12"
+                      stroke-linejoin="round"/>
+                <path d="M60 100L90 130L175 45"
+                      stroke="#4F46E5"
+                      stroke-width="18"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </div>
+
+        <div class="card-title">
+            <h2>INGRESO DE CREDENCIALES</h2>
+        </div>
+
+        <form>
+
+            <div class="form-group">
+                <label>EMAIL DEL SISTEMA</label>
+
+                <input
+                        type="email"
+                        placeholder="admin@medcontrol.com"
+                />
+            </div>
+
+            <div class="form-group">
+                <label>CLAVE DE SEGURIDAD</label>
+
+                <input
+                        type="password"
+                        placeholder="********"
+                />
+            </div>
+
+            <div class="remember-container">
+                <input type="checkbox" id="remember">
+
+                <label for="remember">
+                    MANTENER SESIÓN ACTIVA
+                </label>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="button-container">
+
+                <button
+                        type="submit"
+                        class="btn-login">
+                    AUTENTICAR SISTEMA
+                </button>
+
+                <button
+                        type="button"
+                        class="btn-register">
+                    NUEVO REGISTRO
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- RECUPERACIÓN -->
+    <div class="recover-access">
+        <a href="#">
+            ¿RESTABLECER ACCESO DE SEGURIDAD?
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-text">
+        MED-CONTROL // SECURITY PROTOCOL V2.6 // 2026
+    </div>
+
+</div>
+
+</body>
+</html>

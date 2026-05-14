@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Duplicate Warning Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="duplicate-warning-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showDuplicateWarningToast()" class="open-btn">
+        Validar duplicado
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="duplicate-warning-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <div class="header">
+            <div class="icon">⚠️</div>
+
+            <div>
+                <h1>DATA INTEGRITY CONTROL</h1>
+                <h2>CONFLICT: EXISTING RECORD FOUND</h2>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="info-box">
+            <p class="info-text">
+                SOMETHING WENT WRONG. PLEASE VERIFY ALL FIELDS WERE FILLED CORRECTLY
+            </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="goBackDuplicate()">
+                GO BACK
+            </button>
+
+            <button class="btn-primary" onclick="viewExistingRecord()">
+                VIEW EXISTING RECORD
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                NOTICE: IF THIS IS A NEW CASE, CONTACT DATABASE ADMINISTRATOR
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="duplicate-warning-toast.js"></script>
+
+</body>
+</html>

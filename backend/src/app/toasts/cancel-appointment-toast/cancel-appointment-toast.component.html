@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cancel Appointment Toast</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./cancel-appointment-toast.component.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- TOAST -->
+<div class="toast-overlay" *ngIf="isVisible">
+
+    <div class="toast-card">
+
+        <!-- CONTENT -->
+        <div class="toast-content">
+            <!-- HEADER -->
+            <div class="toast-header">
+
+                <div class="icon-box">
+                    🗑️
+                </div>
+
+                <div class="toast-info">
+
+                    <h1>
+                        CONTROL DE CITAS MÉDICAS
+                    </h1>
+
+                    <h2>
+                        ¿CONFIRMA LA ANULACIÓN DEL TURNO?
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- WARNING -->
+            <div class="warning-box">
+
+                <p class="warning-title">
+                    ADVERTENCIA: ESTA ACCIÓN ES IRREVERSIBLE
+                </p>
+
+                <p class="warning-text">
+                    Si cancelas esta cita, el cupo se liberará inmediatamente en el sistema.
+                </p>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="buttons-container">
+
+                <button
+                        class="btn-secondary"
+                        (click)="closeToast()"
+                >
+                    MANTENER CITA
+                </button>
+
+                <button
+                        class="btn-primary"
+                        (click)="confirmCancel()"
+                >
+                    CONFIRMAR CANCELACIÓN
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

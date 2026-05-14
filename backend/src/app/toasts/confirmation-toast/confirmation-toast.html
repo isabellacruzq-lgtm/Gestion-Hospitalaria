@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Confirmation Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="confirmation-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showConfirmationToast()" class="open-btn">
+        Ejecutar acción
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="confirmation-toast" class="toast hidden">
+    <div class="toast-container">
+
+        <div class="header">
+            <div class="icon">✔</div>
+
+            <div>
+                <h1>PROCESS VERIFICATION</h1>
+                <p>THE ACTION HAS BEEN EXECUTED SUCCESSFULLY</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn-secondary" onclick="goBackHome()">
+                BACK TO HOME
+            </button>
+
+            <button class="btn-primary" onclick="continueProcess()">
+                CONTINUE TO LIST
+            </button>
+        </div>
+
+        <div class="footer-line"></div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="confirmation-toast.js"></script>
+
+</body>
+</html>

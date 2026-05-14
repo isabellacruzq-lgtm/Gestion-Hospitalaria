@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>MED-CONTROL CORE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="splash-screen.component.css">
+</head>
+
+<body>
+
+<div class="splash-container">
+
+    <!-- Barra superior -->
+    <div class="topbar">
+
+        <div class="topbar-left">
+
+            <div class="window-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <span class="window-title">
+          MED-CONTROL CORE
+        </span>
+
+        </div>
+
+        <div class="system-version">
+            SYSTEM_ACCESS_POINT // V2.6
+        </div>
+
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+
+        <!-- Logo -->
+        <div class="logo-wrapper">
+
+            <div class="logo-card">
+
+                <svg
+                        width="60"
+                        height="60"
+                        viewBox="0 0 200 200"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <path
+                            d="M70 30H130V70H170V130H130V170H70V130H30V70H70V30Z"
+                            stroke="#4F46E5"
+                            stroke-width="12"
+                            stroke-linejoin="round"
+                    />
+
+                    <path
+                            d="M60 100L90 130L175 45"
+                            stroke="#4F46E5"
+                            stroke-width="18"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="status-indicator">
+                <div class="pulse"></div>
+            </div>
+
+        </div>
+
+        <!-- Textos -->
+        <div class="welcome-text">
+
+            <h2>
+                PLATAFORMA INTEGRAL DE GESTIÓN HOSPITALARIA
+            </h2>
+
+            <h1>
+                INICIAR SESIÓN EN EL SISTEMA
+            </h1>
+
+        </div>
+
+        <!-- Botón -->
+        <button class="main-button" (click)="ingresar()">
+            AUTENTICAR CREDENCIALES
+        </button>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+      <span>
+        © 2026 HOSPITAL CENTRAL // MED-CONTROL DIVISION
+      </span>
+
+        <span class="status">
+        STATUS: OPERATIONAL // SECURE_CONNECTION
+      </span>
+
+    </div>
+
+</div>
+
+</body>
+</html>

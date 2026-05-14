@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:transparent;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.toast-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:100;
+
+    animation:zoomIn .3s ease;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.toast-card{
+    width:450px;
+
+    background:#ffffff;
+
+    border:2px solid #7c3aed;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:
+            0 25px 60px -15px rgba(79,70,229,.30);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.toast-content{
+    padding:32px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.toast-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-bottom:24px;
+}
+
+.icon-box{
+    width:56px;
+    height:56px;
+
+    border-radius:18px;
+
+    background:#faf5ff;
+    border:1px solid #e9d5ff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+
+    box-shadow:inset 0 2px 6px rgba(0,0,0,.05);
+}
+
+.toast-info{
+    flex:1;
+}
+
+.toast-info h1{
+    font-size:11px;
+    font-weight:900;
+
+    color:#9333ea;
+
+    letter-spacing:.2em;
+    text-transform:uppercase;
+}
+
+.toast-info h2{
+    margin-top:6px;
+
+    font-size:14px;
+    font-weight:900;
+    font-style:italic;
+
+    color:#1e1b4b;
+
+    line-height:1.3;
+
+    text-transform:uppercase;
+}
+
+/* =========================
+   WARNING BOX
+========================= */
+
+.warning-box{
+    background:#faf5ff;
+
+    border-left:4px solid #7c3aed;
+
+    padding:16px;
+
+    border-radius:0 16px 16px 0;
+
+    margin-bottom:24px;
+}
+
+.warning-title{
+    font-size:9px;
+    font-weight:900;
+    font-style:italic;
+
+    color:#7e22ce;
+
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.warning-text{
+    margin-top:6px;
+
+    font-size:10px;
+    font-weight:700;
+
+    color:#64748b;
+
+    line-height:1.5;
+
+    text-transform:none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons-container{
+    display:flex;
+    gap:12px;
+}
+
+.btn-primary,
+.btn-secondary{
+    border:none;
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    border-radius:14px;
+
+    padding:14px 20px;
+
+    font-size:9px;
+    font-weight:900;
+
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.btn-secondary{
+    flex:1;
+
+    background:#ffffff;
+
+    border:2px solid #f1f5f9;
+
+    color:#94a3b8;
+}
+
+.btn-secondary:hover{
+    background:#f8fafc;
+    color:#e11d48;
+}
+
+.btn-primary{
+    flex:1.5;
+
+    color:white;
+
+    background:linear-gradient(
+            to right,
+            #7e22ce,
+            #3730a3
+    );
+
+    box-shadow:
+            0 10px 20px rgba(124,58,237,.20);
+}
+
+.btn-primary:hover{
+    background:linear-gradient(
+            to right,
+            #581c87,
+            #1e1b4b
+    );
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+
+.bottom-bar{
+    width:100%;
+    height:6px;
+
+    opacity:.8;
+
+    background:linear-gradient(
+            to right,
+            #6b21a8,
+            #312e81,
+            #6b21a8
+    );
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes zoomIn{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:520px){
+
+    .toast-card{
+        width:92%;
+    }
+
+    .buttons-container{
+        flex-direction:column;
+    }
+
+}

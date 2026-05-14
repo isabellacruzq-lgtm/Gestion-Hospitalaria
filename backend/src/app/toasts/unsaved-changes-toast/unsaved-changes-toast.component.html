@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unsaved Changes Toast</title>
+
+    <link rel="stylesheet" href="unsaved-changes-toast.component.css">
+</head>
+
+<body>
+
+<div class="toast-container">
+
+    <!-- CARD -->
+    <div class="toast-card">
+
+        <!-- CONTENT -->
+        <div class="toast-content">
+
+            <!-- HEADER -->
+            <div class="toast-header">
+
+                <!-- ICON -->
+                <div class="toast-icon">
+
+                    <!-- WARNING ICON -->
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+
+                        <path
+                                d="M12 9V13"
+                                stroke="#7e22ce"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                        />
+
+                        <circle
+                                cx="12"
+                                cy="17"
+                                r="1"
+                                fill="#7e22ce"
+                        />
+
+                        <path
+                                d="M10.29 3.86L1.82 18A2 2 0 0 0 3.53 21H20.47A2 2 0 0 0 22.18 18L13.71 3.86A2 2 0 0 0 10.29 3.86Z"
+                                stroke="#7e22ce"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                        />
+
+                    </svg>
+
+                </div>
+
+                <!-- TEXT -->
+                <div class="toast-texts">
+
+                    <h1>
+                        SISTEMA DE PREVENCIÓN DE DATOS
+                    </h1>
+
+                    <h2>
+                        ¿CONFIRMA SALIDA SIN GUARDAR CAMBIOS?
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- WARNING BOX -->
+            <div class="warning-box">
+
+                <p>
+                    ESTADO: CAMBIOS LOCALES SIN SINCRONIZAR
+                </p>
+
+            </div>
+
+            <!-- ACTIONS -->
+            <div class="toast-actions">
+
+                <button class="leave-button">
+                    DESCARTAR Y SALIR
+                </button>
+
+                <button class="stay-button">
+                    VOLVER AL EDITOR
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="toast-footer"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

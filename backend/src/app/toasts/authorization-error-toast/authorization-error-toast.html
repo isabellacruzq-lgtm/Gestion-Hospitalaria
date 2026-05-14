@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Authorization Error Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="authorization-error-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showAuthorizationErrorToast()" class="open-btn">
+        Check access
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="authorization-error-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">🚫</div>
+
+            <div>
+                <h1>AUTHORIZATION ERROR</h1>
+                <p>YOU DO NOT HAVE PERMISSION TO VIEW THIS SECTION</p>
+            </div>
+        </div>
+
+        <!-- Info box -->
+        <div class="info-box">
+            <p class="info-title">
+                USER ROLE VERIFICATION
+            </p>
+
+            <div class="info-message">
+                YOUR ROLE DOES NOT HAVE ACCESS TO THIS SECTION
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="requestAccessAuth()">
+                REQUEST ACCESS
+            </button>
+
+            <button class="btn-primary" onclick="goHomeAuth()">
+                GO HOME
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-line"></div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="authorization-error-toast.js"></script>
+
+</body>
+</html>

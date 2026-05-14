@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-btn {
+    padding: 12px 24px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Toast */
+.toast-container {
+    width: 480px;
+    background: white;
+    border: 2px solid #7c3aed;
+    border-radius: 40px;
+    box-shadow: 0 35px 80px -15px rgba(79, 70, 229, 0.45);
+    overflow: hidden;
+    text-transform: uppercase;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    background: #f5f3ff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border: 1px solid #ede9fe;
+}
+
+h1 {
+    font-size: 11px;
+    font-weight: 900;
+    color: #6d28d9;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1e293b;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Info box */
+.info-box {
+    background: #0f172a;
+    padding: 18px;
+    margin: 0 30px 20px;
+    border-radius: 20px;
+    border-bottom: 2px solid rgba(124, 58, 237, 0.3);
+    text-align: center;
+}
+
+.info-text {
+    font-size: 9px;
+    font-weight: 900;
+    color: #a78bfa;
+    letter-spacing: 3px;
+}
+
+/* Buttons */
+.actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 30px 30px;
+}
+
+button {
+    padding: 12px;
+    font-size: 10px;
+    font-weight: 900;
+    border-radius: 12px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    flex: 1;
+}
+
+/* Secondary */
+.btn-secondary {
+    background: white;
+    border: 2px solid #e2e8f0;
+    color: #94a3b8;
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    color: #6d28d9;
+}
+
+/* Primary */
+.btn-primary {
+    flex: 1.5;
+    background: linear-gradient(to right, #6d28d9, #1e1b4b);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #4c1d95, #020617);
+}
+
+/* Footer */
+.footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 12px;
+}
+
+.footer p {
+    font-size: 8px;
+    font-weight: 900;
+    color: #94a3b8;
+    text-align: center;
+    font-style: italic;
+}

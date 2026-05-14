@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Incomplete Data Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="incomplete-data-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showIncompleteDataToast()" class="open-btn">
+        Validar formulario
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="incomplete-data-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <div class="header">
+            <div class="icon">⚠️</div>
+
+            <div>
+                <h1>ERROR PREVENTION SYSTEM</h1>
+                <h2>FORM VALIDATION FAILED</h2>
+            </div>
+        </div>
+
+        <!-- Warning -->
+        <div class="warning-box">
+            <p class="warning-title">
+                REQUIRED FIELDS NOT DETECTED
+            </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="goBack()">
+                GO BACK
+            </button>
+
+            <button class="btn-primary" onclick="fillFields()">
+                COMPLETE FIELDS
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                ER_VALIDATION_042: CONTACT ADMIN IF ERROR PERSISTS
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="incomplete-data-toast.js"></script>
+
+</body>
+</html>

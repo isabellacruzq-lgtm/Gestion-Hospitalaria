@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - MED CONTROL</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="register-screen.component.css">
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <!-- Header -->
+    <div class="header-section">
+
+        <div class="logo-box">
+            <svg width="60" height="60" viewBox="0 0 200 200" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M70 30H130V70H170V130H130V170H70V130H30V70H70V30Z"
+                      stroke="#4F46E5"
+                      stroke-width="12"
+                      stroke-linejoin="round" />
+
+                <path d="M60 100L90 130L175 45"
+                      stroke="#4F46E5"
+                      stroke-width="18"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="header-text">
+            <h1>REGISTRO DE NUEVO USUARIO</h1>
+
+            <div class="header-subtitle">
+                <span class="dot"></span>
+                <p>PORTAL DE REGISTRO DE PACIENTES Y USUARIOS</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="register-content">
+
+        <!-- IDENTIFICACIÓN -->
+        <div class="card card-light">
+
+            <div class="card-title">
+                <h2>01. IDENTIFICACIÓN_CIUDADANA</h2>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="full-width">
+                    <label>NOMBRE COMPLETO</label>
+                    <input type="text" placeholder="Ej. Juan Pérez">
+                </div>
+
+                <div>
+                    <label>N° IDENTIFICACIÓN</label>
+                    <input type="text" placeholder="CC / TI / CE">
+                </div>
+
+                <div>
+                    <label>TELÉFONO</label>
+                    <input type="text" placeholder="+57">
+                </div>
+
+                <div class="full-width">
+                    <label>DIRECCIÓN DE RESIDENCIA</label>
+                    <input type="text" placeholder="Calle / Carrera / Manzana">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SEGURIDAD -->
+        <div class="card card-dark">
+
+            <div class="card-title-dark">
+                <h2>02. CONFIGURACIÓN_CUENTA_API</h2>
+            </div>
+
+            <div class="form-column">
+
+                <div>
+                    <label class="label-light">CORREO ELECTRÓNICO</label>
+                    <input class="dark-input"
+                           type="email"
+                           placeholder="usuario@servidor.com">
+                </div>
+
+                <div class="double-grid">
+
+                    <div>
+                        <label class="label-light">CONTRASEÑA</label>
+                        <input class="dark-input"
+                               type="password"
+                               placeholder="********">
+                    </div>
+
+                    <div>
+                        <label class="label-light">CONFIRMAR</label>
+                        <input class="dark-input"
+                               type="password"
+                               placeholder="********">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="security-text">
+                REQUISITO TÉCNICO: 8+ CARACTERES // MAYÚSCULA // NUMÉRICO
+            </p>
+
+        </div>
+
+        <!-- TÉRMINOS -->
+        <div class="terms-section">
+
+            <input type="checkbox">
+
+            <label>
+                ACEPTO LOS TÉRMINOS DE TRATAMIENTO DE DATOS PERSONALES
+            </label>
+
+        </div>
+
+        <!-- BOTONES -->
+        <div class="buttons-section">
+
+            <button class="btn-secondary" routerLink="/login">
+                TENGO CUENTA
+            </button>
+
+            <button class="btn-primary">
+                CREAR CUENTA
+            </button>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-text">
+            MED-CONTROL // SECURITY PROTOCOL V2.6 // 2026
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

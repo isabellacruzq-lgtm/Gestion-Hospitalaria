@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Error Alert Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="error-alert-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showErrorAlertToast()" class="open-btn">
+        Generar error
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="error-alert-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">⚠️</div>
+
+            <div>
+                <h1>CONNECTION ERROR</h1>
+                <p>FAILED TO SAVE INFORMATION</p>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="info-box">
+            <p class="info-text">
+                TRY AGAIN IN A FEW MOMENTS
+            </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="closeErrorAlertToast()">
+                CLOSE
+            </button>
+
+            <button class="btn-primary" onclick="retryErrorAlert()">
+                RETRY NOW
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                TRY AGAIN OR CHECK YOUR INTERNET CONNECTION
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="error-alert-toast.js"></script>
+
+</body>
+</html>

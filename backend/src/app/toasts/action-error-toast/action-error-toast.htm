@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Action Error Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="action-error-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showActionErrorToast()" class="open-btn">
+        Ejecutar acción
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="action-error-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">❌</div>
+
+            <div>
+                <h1>ACTION ERROR</h1>
+                <p>COULD NOT COMPLETE THE ACTION</p>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="info-box">
+            <p class="info-text">
+                SOMETHING WENT WRONG, PLEASE TRY AGAIN
+            </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="goHomeActionError()">
+                GO HOME
+            </button>
+
+            <button class="btn-primary" onclick="retryActionError()">
+                RETRY
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-line"></div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="action-error-toast.js"></script>
+
+</body>
+</html>

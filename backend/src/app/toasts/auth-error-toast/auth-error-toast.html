@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Auth Error Toast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="auth-error-toast.css">
+</head>
+
+<body>
+
+<div class="container">
+    <button onclick="showAuthErrorToast()" class="open-btn">
+        Login test
+    </button>
+</div>
+
+<!-- Toast -->
+<div id="auth-error-toast" class="overlay hidden">
+    <div class="toast-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">🔐</div>
+
+            <div>
+                <h1>SECURITY ERROR</h1>
+                <p>YOU CANNOT SIGN IN</p>
+            </div>
+        </div>
+
+        <!-- Content box -->
+        <div class="info-box">
+            <p class="info-title">
+                CREDENTIALS CHECK
+            </p>
+
+            <div class="info-message">
+                REVIEW YOUR INFORMATION AND TRY AGAIN
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <button class="btn-secondary" onclick="authHelp()">
+                HELP
+            </button>
+
+            <button class="btn-primary" onclick="authRetry()">
+                TRY AGAIN
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-line"></div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="auth-error-toast.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- ========================= -->
+<!-- HEAD -->
+<!-- ========================= -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Appointment Success Toast</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- COMPONENT STYLES -->
+    <link rel="stylesheet" href="./appointment-success-toast.component.css"/>
+</head>
+
+<!-- ========================= -->
+<!-- BODY -->
+<!-- ========================= -->
+
+<body>
+
+<!-- APPOINTMENT SUCCESS TOAST -->
+<div class="toast-overlay" *ngIf="isVisible">
+
+    <div class="success-toast">
+
+        <!-- HEADER -->
+        <div class="toast-header">
+
+            <!-- ICON -->
+            <div class="icon-box">
+                <div class="icon-circle">
+                    📄
+                </div>
+            </div>
+
+            <!-- TITLE + MESSAGE -->
+            <div class="header-content">
+
+                <!-- DOCFILE -->
+                <span class="docfile-label">
+            DOCFILE #MED-2026-AX45
+          </span>
+
+                <!-- TITLE -->
+                <h1 class="toast-title">
+                    {{ title }}
+                </h1>
+
+                <!-- MESSAGE -->
+                <p class="toast-message">
+                    {{ message }}
+                </p>
+
+            </div>
+
+            <!-- CLOSE -->
+            <button
+                    class="close-button"
+                    (click)="isVisible = false"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="divider"></div>
+
+        <!-- INFO BOX -->
+        <div class="info-box">
+
+            <div class="info-row">
+          <span class="info-label">
+            ESTADO
+          </span>
+
+                <span class="info-value success">
+            COMPLETADO
+          </span>
+            </div>
+
+            <div class="info-row">
+          <span class="info-label">
+            SISTEMA
+          </span>
+
+                <span class="info-value">
+            MED-CONTROL CENTRAL
+          </span>
+            </div>
+
+            <div class="info-row">
+          <span class="info-label">
+            REGISTRO
+          </span>
+
+                <span class="info-value">
+            ACTUALIZADO EXITOSAMENTE
+          </span>
+            </div>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="toast-actions">
+
+            <button
+                    class="primary-button"
+                    (click)="goHome()"
+            >
+                {{ buttonHome }}
+            </button>
+
+            <button
+                    class="secondary-button"
+                    (click)="viewAppointment()"
+            >
+                {{ buttonView }}
+            </button>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="toast-footer">
+
+            <div class="footer-left">
+                SECURITY NODE ACTIVE
+            </div>
+
+            <div class="footer-right">
+                2026 • MED-CONTROL
+            </div>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>

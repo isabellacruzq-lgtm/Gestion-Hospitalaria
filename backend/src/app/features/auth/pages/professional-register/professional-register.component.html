@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro Profesional | MED-CONTROL</title>
+
+    <link rel="stylesheet" href="professional-register.component.css">
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <!-- HEADER -->
+    <div class="register-header">
+
+        <div class="logo-box">
+
+            <svg width="55" height="55" viewBox="0 0 200 200" fill="none">
+                <path
+                        d="M70 30H130V70H170V130H130V170H70V130H30V70H70V30Z"
+                        stroke="#4F46E5"
+                        stroke-width="12"
+                        stroke-linejoin="round"
+                />
+
+                <path
+                        d="M60 100L90 130L175 45"
+                        stroke="#4F46E5"
+                        stroke-width="18"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                />
+            </svg>
+
+        </div>
+
+        <div class="header-text">
+
+            <h1>
+                REGISTRO PROFESIONAL MÉDICO
+            </h1>
+
+            <div class="subtitle">
+
+                <span class="dot"></span>
+
+                <p>
+                    Gestión de Credenciales de Sistema Hospitalario
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FORM GRID -->
+    <div class="form-grid">
+
+        <!-- DATOS PERSONALES -->
+        <div class="card">
+
+            <div class="card-title">
+                01. DATOS_PERSONALES
+            </div>
+
+            <div class="form-group">
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Ej. Dr. Julián Ramírez">
+            </div>
+
+            <div class="form-group">
+                <label>Identificación</label>
+                <input type="text" placeholder="CC / TI / CE">
+            </div>
+
+            <div class="two-columns">
+
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" placeholder="+57">
+                </div>
+
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" placeholder="Calle/Cra">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PERFIL -->
+        <div class="card purple-card">
+
+            <div class="card-title">
+                02. PERFIL_ENGINEERING
+            </div>
+
+            <div class="form-group">
+
+                <label>Rol de Usuario</label>
+
+                <select>
+                    <option>-- Seleccionar --</option>
+                    <option>Médico Especialista</option>
+                    <option>Personal Enfermería</option>
+                    <option>Staff Administrativo</option>
+                </select>
+
+            </div>
+
+            <div class="two-columns">
+
+                <div class="form-group">
+
+                    <label>Ciudad</label>
+
+                    <select [(ngModel)]="selectedCity">
+
+                        <option value="Manizales">Manizales</option>
+                        <option value="Bogotá">Bogotá</option>
+                        <option value="Medellín">Medellín</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Institución</label>
+
+                    <select>
+
+                        <option *ngFor="let hospital of hospitalsByCity[selectedCity]">
+                            {{ hospital }}
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Especialidad / Área</label>
+                <input type="text" placeholder="Cardiología / Urgencias">
+            </div>
+
+        </div>
+
+        <!-- CREDENCIALES -->
+        <div class="security-card">
+
+            <div class="security-title">
+                03. CREDENCIALES_DE_ACCESO_SEGURO
+            </div>
+
+            <div class="security-grid">
+
+                <div class="form-group">
+                    <label class="security-label">
+                        Email Institucional
+                    </label>
+
+                    <input
+                            type="email"
+                            placeholder="user@medcontrol.com"
+                            class="security-input"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="security-label">
+                        Password
+                    </label>
+
+                    <input
+                            type="password"
+                            placeholder="********"
+                            class="security-input"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="security-label">
+                        Confirmación
+                    </label>
+
+                    <input
+                            type="password"
+                            placeholder="********"
+                            class="security-input"
+                    >
+                </div>
+
+            </div>
+
+            <div class="security-footer">
+
+                <div class="line"></div>
+
+                <p>
+                    REQUISITO: 8+ CARACTERES // ALFANUMÉRICO // MAYÚSCULAS
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons-container">
+
+        <button class="cancel-btn" (click)="cancelar()">
+            DESCARTAR
+        </button>
+
+        <button class="register-btn" (click)="registrar()">
+            PROCESAR REGISTRO
+        </button>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        MED-CONTROL // SECURITY PROTOCOL v2.6 // 2026
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appointment Cancelled Toast</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./appointment-cancelled-toast.component.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- TOAST -->
+<div class="toast-container" *ngIf="isVisible">
+
+    <div class="toast-card">
+
+        <!-- CONTENT -->
+        <div class="toast-content">
+
+            <!-- HEADER -->
+            <div class="toast-header">
+
+                <!-- ICON -->
+                <div class="icon-box">
+                    🗑️
+                </div>
+
+                <!-- TEXT -->
+                <div class="toast-info">
+
+                    <h1>SISTEMA DE CITAS: ANULACIÓN</h1>
+                    <p>LA CITA HA SIDO REMOVIDA DEL REGISTRO</p>
+
+                </div>
+
+                <!-- CLOSE -->
+                <button class="close-button" (click)="closeToast()">
+                    ✕
+                </button>
+
+            </div>
+
+            <!-- INFO BOX -->
+            <div class="info-box">
+
+                <p>
+                    TRANSACCIÓN FINALIZADA
+                </p>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="buttons-container">
+
+                <!-- PRIMARY -->
+                <button
+                        class="btn-primary"
+                        (click)="goDashboard()"
+                >
+                    VOLVER
+                </button>
+
+                <!-- SECONDARY -->
+                <button
+                        class="btn-secondary"
+                        (click)="newAppointment()"
+                >
+                    REAGENDAR TURNO
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="bottom-bar"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Código | MED-CONTROL</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="confirm-code.component.css">
+</head>
+
+<body>
+
+<div class="confirm-container">
+
+    <!-- Header -->
+    <div class="confirm-header">
+
+        <div class="message-icon-container">
+
+            <!-- SVG Icon -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                <path
+                        d="M21 11.5C21 16.1391 16.9706 20 12 20C10.5407 20 9.16782 19.6661 7.9546 19.0769L3 21L4.5 16.5C3.5595 15.1162 3 13.3934 3 11.5C3 6.86091 7.02944 3 12 3C16.9706 3 21 6.86091 21 11.5Z"
+                        stroke="#7e22ce"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                />
+
+                <path
+                        d="M8 9H16"
+                        stroke="#7e22ce"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                />
+
+                <path
+                        d="M8 13H13"
+                        stroke="#7e22ce"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                />
+            </svg>
+
+        </div>
+
+        <div class="header-text">
+            <h1>VERIFICAR CÓDIGO</h1>
+
+            <p>
+                Validación de identidad mediante token de mensajería
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Card -->
+    <div class="confirm-card">
+
+        <div class="card-header">
+            <h2>INGRESO DE TOKEN OTP</h2>
+        </div>
+
+        <div class="form-group">
+
+            <label for="codigo">
+                Código de 6 Dígitos
+            </label>
+
+            <input
+                    type="text"
+                    id="codigo"
+                    maxlength="6"
+                    placeholder="000000"
+            >
+
+        </div>
+
+        <div class="info-box">
+            <p>
+                Revisa tu terminal móvil registrado.
+                El código expira en 5 minutos.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons-container">
+
+        <button class="btn-secondary" (click)="reenviarCodigo()">
+            REENVIAR
+        </button>
+
+        <button class="btn-primary" (click)="validarCodigo()">
+            VALIDAR ACCESO
+        </button>
+
+    </div>
+
+    <!-- Help -->
+    <div class="help-text">
+        <p>
+            ¿No recibiste el mensaje de WhatsApp?
+            Verifica tu conexión o intenta reenviar.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-text">
+        MED-CONTROL // SECURITY NODE // 2026
+    </div>
+
+</div>
+
+</body>
+</html>
