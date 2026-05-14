@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
 @Getter         // Lombok: genera getters
 @Setter         // Lombok: genera setters
 @NoArgsConstructor
-@AllArgsConstructor(access = lombok.AccessLevel.PACKAGE)
 @Builder       // Lombok: patrón Builder para construcción de objetos
 @Entity         // JPA: mapea esta clase como tabla en la base de datos
 @Table(name = "usuarios") // JPA: nombre de la tabla en MySQL
@@ -58,5 +57,21 @@ public class Usuario {
     @PrePersist // JPA: se ejecuta automáticamente antes de guardar en BD
     protected void onCreate() {
         fechaCreacion = LocalDateTime.now();
+    }
+
+    /**
+     * Constructor para el patrón Builder.
+     */
+    @Builder
+    public Usuario(Long id, String nombre, String apellido, String email,
+                   String password, RolUsuario rol, Boolean activo, LocalDateTime fechaCreacion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.password = password;
+        this.rol = rol;
+        this.activo = activo;
+        this.fechaCreacion = fechaCreacion;
     }
 }
