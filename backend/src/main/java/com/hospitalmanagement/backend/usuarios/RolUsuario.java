@@ -1,7 +1,7 @@
 package com.hospitalmanagement.backend.usuarios;
 
 public class RolUsuario {
-    /*ADMIN,
+    ADMIN,
     DOCTOR,
-    PACIENTE*/
+    PACIENTE;
 }
