@@ -1,7 +1,7 @@
 package com.hospitalmanagement.backend.usuarios;
 
-public class RolUsuario {
+public enum RolUsuario {
     ADMIN,
     DOCTOR,
-    PACIENTE;
+    PACIENTE,
 }

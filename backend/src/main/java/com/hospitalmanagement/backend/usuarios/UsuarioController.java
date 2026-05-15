@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.*;
 public class UsuarioController {
     
     /** Servicio de usuarios. Inyección por constructor (DIP) */
-    private final UsuarioService usuariServide;
+    private final UsuarioService usuarioService;
 
     /**
      * Registra un nuevo usuario en el sistema
