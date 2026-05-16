@@ -8,12 +8,13 @@ describe('DashboardDoctor', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DashboardDoctor],
-    }).compileComponents();
+      imports: [DashboardDoctor]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(DashboardDoctor);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
