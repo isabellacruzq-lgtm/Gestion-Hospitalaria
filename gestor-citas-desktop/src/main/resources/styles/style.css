@@ -1,0 +1,79 @@
+.root{
+    -fx-font-family: "Arial";
+    -fx-background-color: #f5f6fa;
+}
+
+.sidebar{
+    -fx-background-color: linear-gradient(to bottom, #6a11cb, #2575fc);
+    -fx-padding: 20;
+    -fx-alignment: top-center;
+}
+
+.menu-button{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-cursor: hand;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+    -fx-background-radius: 15;
+}
+
+.menu-button:hover{
+    -fx-background-color: rgba(255,255,255,0.2);
+}
+
+.title{
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.card{
+    -fx-background-color: white;
+    -fx-padding: 25;
+    -fx-spacing: 15;
+    -fx-pref-width: 250;
+    -fx-background-radius: 20;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.1),
+            10,
+            0,
+            0,
+            4
+    );
+}
+
+.card-number{
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6a11cb;
+}
+
+.table-view{
+    -fx-background-radius: 20;
+    -fx-padding: 10;
+}
+
+.primary-button{
+
+    -fx-background-color: linear-gradient(to right, #6a11cb, #2575fc);
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 16px;
+
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 15;
+
+    -fx-padding: 15 30;
+
+    -fx-cursor: hand;
+}
+
+.primary-button:hover{
+
+    -fx-opacity: 0.9;
+}

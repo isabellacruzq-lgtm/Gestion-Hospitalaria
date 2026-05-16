@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.uam.gestorcitas.controllers.DashboardController"
+            prefWidth="1400"
+            prefHeight="900"
+            stylesheets="@../styles/style.css">
+
+    <!-- SIDEBAR -->
+
+    <left>
+
+        <VBox spacing="20"
+              prefWidth="90"
+              styleClass="sidebar">
+
+            <Button text="🏠"
+                    styleClass="menu-button"/>
+
+            <Button text="📅"
+                    styleClass="menu-button"
+                    onAction="#openAppointmentView"/>
+
+            <Button text="👨‍⚕️"
+                    styleClass="menu-button"/>
+
+            <Button text="📋"
+                    styleClass="menu-button"/>
+
+        </VBox>
+
+    </left>
+
+    <!-- MAIN -->
+
+    <center>
+
+        <VBox spacing="20"
+              style="-fx-padding: 30;">
+
+            <Label text="DASHBOARD OPERATIVO DE CITAS"
+                   styleClass="title"/>
+
+            <HBox spacing="20">
+
+                <VBox styleClass="card">
+
+                    <Label text="CITAS HOY"/>
+                    <Label text="42"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+                <VBox styleClass="card">
+
+                    <Label text="PACIENTES EN SALA"/>
+                    <Label text="08"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+                <VBox styleClass="card">
+
+                    <Label text="CONSULTORIOS"/>
+                    <Label text="12"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+            </HBox>
+
+            <TableView prefHeight="500">
+
+                <columns>
+
+                    <TableColumn text="Hora"
+                                 prefWidth="150"/>
+
+                    <TableColumn text="Paciente"
+                                 prefWidth="250"/>
+
+                    <TableColumn text="Especialista"
+                                 prefWidth="250"/>
+
+                    <TableColumn text="Estado"
+                                 prefWidth="200"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>
